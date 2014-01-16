@@ -76,6 +76,8 @@ AngularFlaskGenerator.prototype.app = function app() {
   this.mkdir(staticDir);
   this.mkdir(templatesDir);
 
+  this.copy('install.bat', 'install.bat');
+  this.copy('install.sh', 'install.sh');
   this.copy('config.py', 'config.py');
   this.copy('db_create.py', 'db_create.py');
   this.copy('db_downgrade.py', 'db_downgrade.py');

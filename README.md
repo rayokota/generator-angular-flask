@@ -14,6 +14,10 @@ Install the Angular-Flask generator:
 
     npm install -g generator-angular-flask
 
+Install a virtual environment in new `flask` directory using `install.sh` (or `install.bat` for Windows):
+
+	install.sh
+	
 ## Creating a Flask service
 
 In a new directory, generate the service:
