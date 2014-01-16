@@ -16,7 +16,7 @@ Install the Angular-Flask generator:
 
 Install a virtual environment in new `flask` directory using `install.sh` (or `install.bat` for Windows):
 
-	install.sh
+	./install.sh
 	
 ## Creating a Flask service
 
@@ -48,6 +48,10 @@ You will be asked to specify attributes for the entity, where each attribute has
 - whether the attribute is required
 
 Files that are regenerated will appear as conflicts.  Allow the generator to overwrite these files as long as no custom changes have been made.
+
+Create the database:
+
+    bin/flask/python db_create.py
 
 Run the service:
 
