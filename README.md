@@ -4,7 +4,7 @@ A [Yeoman](http://yeoman.io) generator for [AngularJS](http://angularjs.org) and
 
 ## Installation
 
-Install [Git](http://git-scm.com), [node.js](http://nodejs.org), and [Python](http://www.python.org/).  The development mode also requires [SQLite](http://www.sqlite.org).
+Install [Git](http://git-scm.com), [node.js](http://nodejs.org), and [Python 2.7](http://www.python.org/).  The development mode also requires [SQLite](http://www.sqlite.org).
 
 Install Yeoman:
 
@@ -49,7 +49,7 @@ You will be asked to specify attributes for the entity, where each attribute has
 
 Files that are regenerated will appear as conflicts.  Allow the generator to overwrite these files as long as no custom changes have been made.
 
-Create the database:
+Create the database as described in [this blog](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database).
 
     bin/flask/python db_create.py
 

@@ -6,7 +6,7 @@ class <%= _.capitalize(name) %>(db.Model):
     <%= attr.attrName %> = db.Column(db.<% if (attr.attrType == 'Enum') { %>Enum(<% var delim = ''; _.each(attr.enumValues, function (value) { %><%= delim %>'<%= value %>'<% delim = ', '; }) %>)<% } else { %><%= attr.attrType %><% }; %>)
     <% }); %>
 
-    def to_json(self):
+    def to_dict(self):
         return dict(<% _.each(attrs, function (attr) {  %>
             <%= attr.attrName %> = self.<%= attr.attrName %><% if (attr.attrType == 'Date') { %>.isoformat()<% }; %>,<% }); %>
             id = self.id

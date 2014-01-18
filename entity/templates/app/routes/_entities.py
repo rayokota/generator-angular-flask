@@ -7,14 +7,14 @@ import json
 @app.route('/<%= baseName %>/<%= pluralize(name) %>', methods = ['GET'])
 def get_all_<%= pluralize(name) %>():
     entities = <%= name %>.<%= _.capitalize(name) %>.query.all()
-    return json.dumps([entity.to_json() for entity in entities])
+    return json.dumps([entity.to_dict() for entity in entities])
 
 @app.route('/<%= baseName %>/<%= pluralize(name) %>/<int:id>', methods = ['GET'])
 def get_<%= name %>(id):
     entity = <%= name %>.<%= _.capitalize(name) %>.query.get(id)
     if not entity:
         abort(404)
-    return jsonify(entity.to_json())
+    return jsonify(entity.to_dict())
 
 @app.route('/<%= baseName %>/<%= pluralize(name) %>', methods = ['POST'])
 def create_<%= name %>():
@@ -23,7 +23,7 @@ def create_<%= name %>():
     )
     db.session.add(entity)
     db.session.commit()
-    return jsonify(entity.to_json()), 201
+    return jsonify(entity.to_dict()), 201
 
 @app.route('/<%= baseName %>/<%= pluralize(name) %>/<int:id>', methods = ['PUT'])
 def update_<%= name %>(id):
@@ -36,7 +36,7 @@ def update_<%= name %>(id):
     )
     db.session.merge(entity)
     db.session.commit()
-    return jsonify(entity.to_json()), 201
+    return jsonify(entity.to_dict()), 201
 
 @app.route('/<%= baseName %>/<%= pluralize(name) %>/<int:id>', methods = ['DELETE'])
 def delete_<%= name %>(id):
