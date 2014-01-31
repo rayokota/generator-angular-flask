@@ -2,6 +2,8 @@
 
 A [Yeoman](http://yeoman.io) generator for [AngularJS](http://angularjs.org) and [Flask](http://flask.pocoo.org).
 
+Flask is a Python-based micro-framework.  For AngularJS integration with other micro-frameworks, see https://github.com/rayokota/MicroFrameworkRosettaStone.
+
 ## Installation
 
 Install [Git](http://git-scm.com), [node.js](http://nodejs.org), and [Python 2.7](http://www.python.org/).  The development mode also requires [SQLite](http://www.sqlite.org).
