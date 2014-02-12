@@ -43,15 +43,15 @@
                             <span class="error" ng-show="form.<%= attr.attrName %>.$error.min">Must be greater than or equal to <%= attr.min %>.</span>
                             <span class="error" ng-show="form.<%= attr.attrName %>.$error.max">Must be less than or equal to <%= attr.max %>.</span><%
                                } else if (attr.attrType === "Boolean") { %>
-                            <input type="checkbox" class="form-control" name="<%= attr.attrName %>"
+                            <input type="checkbox" name="<%= attr.attrName %>"
                                    ng-model="<%= name %>.<%= attr.attrName %>" ng-required="<%= attr.required %>"/><%
                                } else if (attr.attrType === "Date") { %>
                             <input type="text" class="form-control" name="<%= attr.attrName %>" ui-date="<%= attr.attrName %>DateOptions" ui-date-format="yy-mm-dd" 
                                    ng-model="<%= name %>.<%= attr.attrName %>" ng-required="<%= attr.required %>"/><%
                                } else if (attr.attrType === "Enum") {
                                  _.each(attr.enumValues, function (value) { %>
-                            <input type="radio" class="form-control" name="<%= attr.attrName %>" value="<%= value %>"
-                                   ng-model="<%= name %>.<%= attr.attrName %>" ng-required="<%= attr.required %>"/> <%= value %> <br/><% })} %>
+                            <label class="radio"><input type="radio" name="<%= attr.attrName %>" value="<%= value %>"
+                                   ng-model="<%= name %>.<%= attr.attrName %>" ng-required="<%= attr.required %>"/> <%= value %> </label><% })} %>
                         </div>
                         <% }); %>
 
