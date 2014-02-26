@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-flask",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A Yeoman generator for AngularJS + Flask",
   "keywords": [
     "yeoman-generator",
@@ -8,7 +8,7 @@
     "Flask",
     "SQLAlchemy",
     "AngularJS",
-    "Twitter Bootstrap"
+    "Bootstrap"
   ],
   "homepage": "https://github.com/rayokota/generator-angular-flask",
   "bugs": "https://github.com/rayokota/generator-angular-flask/issues",
