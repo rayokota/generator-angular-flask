@@ -16,6 +16,7 @@ Install the Angular-Flask generator:
 
     npm install -g generator-angular-flask
 
+The above prerequisites can be installed to a VM using the [Angular-Flask provisioner](https://github.com/rayokota/provision-angular-flask).
 	
 ## Creating a Flask service
 
