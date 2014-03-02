@@ -36,7 +36,7 @@ def update_<%= name %>(id):
     )
     db.session.merge(entity)
     db.session.commit()
-    return jsonify(entity.to_dict()), 201
+    return jsonify(entity.to_dict()), 200
 
 @app.route('/<%= baseName %>/<%= pluralize(name) %>/<int:id>', methods = ['DELETE'])
 def delete_<%= name %>(id):
