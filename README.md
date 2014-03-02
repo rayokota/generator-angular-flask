@@ -16,9 +16,6 @@ Install the Angular-Flask generator:
 
     npm install -g generator-angular-flask
 
-Install a virtual environment in new `flask` directory using `install.sh` (or `install.bat` for Windows):
-
-	./install.sh
 	
 ## Creating a Flask service
 
@@ -26,9 +23,13 @@ In a new directory, generate the service:
 
     yo angular-flask
 
+Install a virtual environment in new `flask` directory using `install.sh` (or `install.bat` for Windows):
+
+	./install.sh
+	
 Run the service:
 
-    bin/flask/python run.py
+    flask/bin/python run.py
 
 Your service will run at [http://localhost:5000](http://localhost:5000).
 
@@ -53,11 +54,11 @@ Files that are regenerated will appear as conflicts.  Allow the generator to ove
 
 Create the database as described in [this blog](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database).
 
-    bin/flask/python db_create.py
+    flask/bin/python db_create.py
 
 Run the service:
 
-    bin/flask/python run.py
+    flask/bin/python run.py
     
 A client-side AngularJS application will now be available by running
 
