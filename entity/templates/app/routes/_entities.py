@@ -45,4 +45,4 @@ def delete_<%= name %>(id):
         abort(404)
     db.session.delete(entity)
     db.session.commit()
-    return '', 200
+    return '', 204
